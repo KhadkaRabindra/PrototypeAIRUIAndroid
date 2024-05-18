@@ -1,4 +1,11 @@
+# JitPack configuration file
 jdk:
-  - openjdk11
+  - openjdk21
+
 before_install:
   - ./scripts/prepareJitpackEnvironment.sh
+
+# Specify the build command for your project
+build:
+  script:
+    - ./gradlew clean build
