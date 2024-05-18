@@ -2,9 +2,6 @@ package com.example.prototypeairuiandroid.components
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-
-
-
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -18,7 +15,7 @@ import com.example.airui.ui.BaseTheme
 @Composable
 fun NewsButton(
     modifier: Modifier = Modifier,
-    backgroundColor: Color = com.example.airui.ui.BaseTheme.colors.primary,
+    backgroundColor: Color = BaseTheme.colors.primary,
     contentColor: Color = contentColorFor(backgroundColor = backgroundColor),
     onClick: () -> Unit,
     content: @Composable RowScope.() -> Unit
@@ -26,7 +23,7 @@ fun NewsButton(
     Button(
         modifier = modifier,
         onClick = onClick,
-        shape = com.example.airui.ui.BaseTheme.shapes.buttonShape,
+        shape = BaseTheme.shapes.buttonShape,
         colors = ButtonDefaults.buttonColors(
             containerColor = backgroundColor,
             contentColor = contentColor,
@@ -38,8 +35,8 @@ fun NewsButton(
 @Composable
 fun NewsText(
     modifier: Modifier = Modifier,
-    style: TextStyle = com.example.airui.ui.BaseTheme.typography.title,
-    textColor: Color = com.example.airui.ui.BaseTheme.colors.onBackground,
+    style: TextStyle = BaseTheme.typography.title,
+    textColor: Color = BaseTheme.colors.onBackground,
     textAlign: TextAlign = TextAlign.Start,
     text: String,
 ) {

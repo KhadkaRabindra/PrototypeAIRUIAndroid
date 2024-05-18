@@ -36,13 +36,13 @@ fun MainView(modifier: Modifier){
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(com.example.airui.ui.BaseTheme.colors.background)
-            .padding(com.example.airui.ui.BaseTheme.dimensions.mediumPadding),
-        verticalArrangement = Arrangement.spacedBy(com.example.airui.ui.BaseTheme.dimensions.mediumPadding),
+            .background(BaseTheme.colors.background)
+            .padding(BaseTheme.dimensions.mediumPadding),
+        verticalArrangement = Arrangement.spacedBy(BaseTheme.dimensions.mediumPadding),
     ) {
         NewsText(
             text = "Newsely",
-            style = com.example.airui.ui.BaseTheme.typography.headline,
+            style = BaseTheme.typography.headline,
         )
         /*NewsText(text = "Pick Preferred Theme")
         LazyRow(
@@ -107,10 +107,10 @@ fun NewsList(
     LazyColumn(
         modifier = modifier
             .fillMaxWidth()
-            .background(com.example.airui.ui.BaseTheme.colors.background)
-            .padding(top = com.example.airui.ui.BaseTheme.dimensions.mediumPadding),
+            .background(BaseTheme.colors.background)
+            .padding(top = BaseTheme.dimensions.mediumPadding),
         verticalArrangement = Arrangement
-            .spacedBy(com.example.airui.ui.BaseTheme.dimensions.mediumPadding),
+            .spacedBy(BaseTheme.dimensions.mediumPadding),
     ) {
 
         items(articles){article ->

@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            com.example.airui.ui.AIRUITheme {
+            AIRUITheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     MainView(Modifier.padding(innerPadding))
                 }
@@ -38,7 +38,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    com.example.airui.ui.AIRUITheme {
+    AIRUITheme {
         Greeting("Android")
     }
 }
