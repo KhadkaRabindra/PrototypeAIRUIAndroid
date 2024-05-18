@@ -25,7 +25,7 @@ val typographyExtraSmall = BaseTypography(
         fontWeight = FontWeight.Black,
     ),
     title = TextStyle(
-        fontSize = 21.sp,
+        fontSize = 22.sp,
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.Bold,
     ),
@@ -59,7 +59,7 @@ val typographySmall = BaseTypography(
         fontWeight = FontWeight.Black,
     ),
     title = TextStyle(
-        fontSize = 21.sp,
+        fontSize = 32.sp,
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.Bold,
     ),
@@ -126,7 +126,7 @@ val typographyLarge = BaseTypography(
         fontWeight = FontWeight.Black,
     ),
     title = TextStyle(
-        fontSize = 21.sp,
+        fontSize = 52.sp,
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.Bold,
     ),
