@@ -1,9 +1,6 @@
-import org.gradle.internal.impldep.org.eclipse.jgit.lib.InflaterCache.release
-
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id ("maven-publish")
 }
 
 android {
@@ -33,6 +30,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
     buildFeatures {
         compose = true
     }
@@ -42,10 +40,6 @@ android {
 }
 
 dependencies {
-
-    /*implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)*/
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -58,18 +52,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-}
-
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("release") {
-                from(components["release"])
-
-                groupId = "com.github.KhadkaRabindra"
-                artifactId = "airui"
-                version = "1.0"
-            }
-        }
-    }
 }

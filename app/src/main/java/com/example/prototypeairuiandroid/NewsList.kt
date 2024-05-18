@@ -24,7 +24,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import com.example.airui.ui.BaseTheme
-import com.example.airui.ui.ThemeMode
 import com.example.prototypeairuiandroid.components.NewsText
 import com.example.prototypeairuiandroid.model.Article
 
@@ -32,18 +31,18 @@ import com.example.prototypeairuiandroid.model.Article
 @Composable
 fun MainView(modifier: Modifier){
 
-    val themes = listOf(ThemeMode.Light, ThemeMode.Dark, ThemeMode.Space)
-    var currentThemeMode by remember { mutableStateOf<ThemeMode>(ThemeMode.Light) }
+    val themes = listOf(com.example.airui.ui.ThemeMode.Light, com.example.airui.ui.ThemeMode.Dark, com.example.airui.ui.ThemeMode.Space)
+    var currentThemeMode by remember { mutableStateOf<com.example.airui.ui.ThemeMode>(com.example.airui.ui.ThemeMode.Light) }
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(BaseTheme.colors.background)
-            .padding(BaseTheme.dimensions.mediumPadding),
-        verticalArrangement = Arrangement.spacedBy(BaseTheme.dimensions.mediumPadding),
+            .background(com.example.airui.ui.BaseTheme.colors.background)
+            .padding(com.example.airui.ui.BaseTheme.dimensions.mediumPadding),
+        verticalArrangement = Arrangement.spacedBy(com.example.airui.ui.BaseTheme.dimensions.mediumPadding),
     ) {
         NewsText(
             text = "Newsely",
-            style = BaseTheme.typography.headline,
+            style = com.example.airui.ui.BaseTheme.typography.headline,
         )
         /*NewsText(text = "Pick Preferred Theme")
         LazyRow(
@@ -108,10 +107,10 @@ fun NewsList(
     LazyColumn(
         modifier = modifier
             .fillMaxWidth()
-            .background(BaseTheme.colors.background)
-            .padding(top = BaseTheme.dimensions.mediumPadding),
+            .background(com.example.airui.ui.BaseTheme.colors.background)
+            .padding(top = com.example.airui.ui.BaseTheme.dimensions.mediumPadding),
         verticalArrangement = Arrangement
-            .spacedBy(BaseTheme.dimensions.mediumPadding),
+            .spacedBy(com.example.airui.ui.BaseTheme.dimensions.mediumPadding),
     ) {
 
         items(articles){article ->
