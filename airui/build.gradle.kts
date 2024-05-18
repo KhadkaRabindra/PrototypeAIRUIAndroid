@@ -64,7 +64,7 @@ afterEvaluate {
 
                 groupId = "com.github.KhadkaRabindra"
                 artifactId = "airui"
-                version = "v5.0.0"
+                version = "v5.0.1"
             }
         }
     }
